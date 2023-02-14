@@ -3,11 +3,31 @@
 
 
 /*GENERAL SETTINGS*/
+
 body {
     font-family: 'Roboto', 'Arial';
     font-size: 16px;
     text-align: center;
 }
+
+/*FORM INPUT STYLING*/
+
+input, select {
+    border-radius: 1rem;
+    height: 1.5rem;
+    padding: 0 1.5rem;
+}
+
+button {
+    border: 0.1rem solid;
+    border-radius: 1rem;
+    background-color: green;
+    color: white;
+    height: 1.9rem;
+    margin-left: 1rem;
+}
+
+/*HTML WRAPPER STYLING*/
 
 #expense-screen {
     height: 20rem;
@@ -17,9 +37,19 @@ body {
     align-items: center;
 }
 
+.expense-table-container {
+    display: block;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin: 0 auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
 /*TABLE STYLING*/
+
 table {
-    width: 80rem;
+    width: 60rem;
     margin-top: 2rem;
     background-color: #7e7e7e;
     color: white;
@@ -52,18 +82,9 @@ tfoot td {
     padding: 1.5rem 0;
 }
 
-
-
 #delete-button {
     width: 1.5rem;
     height: 1.5rem;
 }
 
 /* MEDIA QUERIES */
-
-@media screen and (max-width: 600px) and (min-width: 300px) {
-    table {
-        overflow-x: scroll;
-    }
-    
-}
