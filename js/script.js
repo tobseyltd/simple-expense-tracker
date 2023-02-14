@@ -13,14 +13,14 @@ document.getElementById('submit').onclick = () => {
         // Need to declare variables for formatting date and expense value to european standard //
 
         const formatted_date_DE = new Date(document.querySelector('#date').value);
-        const expense_Value = document.querySelector('#expense').value;
+        const formatted_expense_Value = document.querySelector('#expense').value;
 
         //////////////////////////////////////////////////////////////////////////////////////////
 
         document.getElementById('add-expense').innerHTML += `
             <tr id='expense-row'>
                 <td>${document.querySelector('#expense-type').value}</th>
-                <td id='expense'>${new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(expense_Value)}</td>
+                <td id='expense'>${new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(formatted_expense_Value)}</td>
                 <td>${document.querySelector('#payment-type').value}</td>
                 <td id='row-date'>${new Intl.DateTimeFormat('de-DE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }).format(formatted_date_DE)}</td>
                 <td><img id="delete-button" src="./media/delete.png"/></td>
